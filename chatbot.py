@@ -1,17 +1,16 @@
 import os
-import openai
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 from dotenv import load_dotenv
 
 # Load the API key from .env (optional, safer)
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def chat_with_gpt(prompt):
     try:
-        response = openai.ChatCompletion.create(
-            model="gpt-4-turbo",  # or "gpt-3.5-turbo" if you're on the free tier
-            messages=[{"role": "user", "content": prompt}]
-        )
+        response = client.chat.completions.create(model="gpt-4-turbo", 
+        messages=[{"role": "user", "content": prompt}])
         return response.choices[0].message.content.strip()
     except Exception as e:
         return f"API Error: {e}"
@@ -25,3 +24,4 @@ if __name__ == "__main__":
             break
         response = chat_with_gpt(user_input)
         print("AI:", response)
+

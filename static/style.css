@@ -1,0 +1,47 @@
+body {
+    background-color: grey;
+    color: black;
+    font-family: 'Gabriola Brush Script MT', cursive;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.heading {
+    font-family: 'Brush Script MT', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: gray;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}

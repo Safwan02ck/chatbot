@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI CHATBOT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.cdnfonts.com/css/algerian" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">AI CHATBOT</h1>
+
+        {% if prompt %}
+        <p><strong>You:</strong> {{ prompt }}</p>
+        {% endif %}
+        {% if response %}
+        <p><strong>Bot:</strong> {{ response }}</p>
+        {% endif %}
+
+        <form method="post">
+            <input type="text" name="user_input" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
