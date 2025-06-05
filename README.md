@@ -4,6 +4,14 @@ This is a simple yet functional AI chatbot built using **Python**, **Flask**, an
 
 ---
 
+Live Demo
+
+You can try the AI Chatbot live on Render at:
+
+[https://chatbot-g8j7.onrender.com](https://chatbot-g8j7.onrender.com)
+
+---
+
 Features:
 
 -  Powered by OpenAI GPT-4 Turbo
